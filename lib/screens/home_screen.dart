@@ -39,7 +39,12 @@ class _HomeScreenState extends State<HomeScreen> {
           "Taskly",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        actions: [const Icon(Icons.notifications_outlined)],
+        actions: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
+            child: const Icon(Icons.notifications_outlined),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -68,9 +73,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0,0,10,0),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
                   child: CircleAvatar(
-                    
                     radius: 32,
                     backgroundImage: AssetImage('assets/icons/Banner.png'),
                   ),
@@ -78,6 +82,33 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             SizedBox(height: 24),
+
+            ListTile(
+              tileColor: AppColors.mainColor.withOpacity(0.2),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              leading: CircleAvatar(
+                radius: 24,
+                backgroundColor: AppColors.mainColor,
+                child: Icon(
+                  Icons.calendar_today_outlined,
+                  color: Colors.white,
+                  size: 28,
+                ),
+              ),
+              title: Text(
+                "You have 5 tasks today",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              subtitle: Text("Keep going, you're doing great!"),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                color: AppColors.mainColor,
+              ),
+            ),
+            SizedBox(height: 24),
+
             Text(
               "Categories",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -117,16 +148,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   "Today's Tasks",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                Text(
-                  "See all",
-                  style: TextStyle(color:AppColors.mainColor,),
-                ),
+                Text("See all", style: TextStyle(color: AppColors.mainColor)),
               ],
             ),
             SizedBox(height: 24),
 
             SizedBox(
-              height: 300,
+              height: 230,
               child: ListView.builder(
                 shrinkWrap: true,
                 itemCount: tasksList.length,
@@ -146,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 24),
             Container(
               width: width,
-              height: height * 0.15,
+              height: height * 0.12,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: AppColors.mainColor,
@@ -154,14 +182,25 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  
-                  Image.asset("assets/icons/tree.png",width: 150,height: 150,),
+                  Image.asset("assets/icons/tree.png", width: 150, height: 150),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('"Small Progress Everyday',style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-                      Text('Leads To Big Results."',style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                      Text(
+                        '"Small Progress Everyday',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Leads To Big Results."',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -205,7 +244,7 @@ Widget categoryBox({
     height: width * 0.285,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
-      color: color.withValues(alpha: 0.1),
+      color: color.withOpacity(0.1),
     ),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
