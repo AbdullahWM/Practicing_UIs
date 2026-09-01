@@ -4,6 +4,7 @@ Scrollable ✅
 Constant class with main colors ✅
 Data and modelling ✅
 
-<img width="300" alt="Screenshot_1788216228" src="https://github.com/user-attachments/assets/5845cd6a-fc3a-42a8-b44e-e537334ee58e" />
-<img width="300" alt="Screenshot_1788216219" src="https://github.com/user-attachments/assets/5a4cbb22-ea0d-4ce3-a182-386639f0d16e" />
+
+<img width="300" alt="Screenshot_1788272382" src="https://github.com/user-attachments/assets/e2aa90df-d74c-4375-95ce-62f60fddc669" />
+<img width="300" alt="Screenshot_1788272378" src="https://github.com/user-attachments/assets/09c1b57a-7ec3-4b2f-b89a-b4b894573994" />
 
