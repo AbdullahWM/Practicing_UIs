@@ -1,8 +1,8 @@
 # flutter_day_7
-حاولت اطبق كل المفاهيم وان شاء الله مانسيت شي
-Scrollable ✅
-Constant class with main colors ✅
-Data and modelling ✅
+
+Scrollable ✅  
+Constant class with main colors ✅  
+Data and modelling ✅  
 
 
 <img width="300" alt="Screenshot_1788272382" src="https://github.com/user-attachments/assets/e2aa90df-d74c-4375-95ce-62f60fddc669" />
